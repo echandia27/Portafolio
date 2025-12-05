@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+header li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header li {
+    list-style: none;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(183, 156, 207);
+    margin-bottom: 20px; /* 👈 separa el header del contenido */
+
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    border: 2px solid rgb(30, 183, 210);
+    border-radius: 20px;
+    margin-left: 400px;
+    margin-right: 300px;
+
+}
+
+.card {
+    text-align: center;
+    width: 300px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: rgb(40,40,40);
+}
+
+/* Botón del menú */
+.btn-menu {
+    text-decoration: none;   /* Quitar subrayado */
+    background-color: rgb(30, 183, 210); /* Color del botón */
+    padding: 10px 20px;      /* Tamaño del botón */
+    border-radius: 10px;     /* Bordes redondeados */
+    color: white;            /* Texto en blanco */
+    font-weight: bold;
+    transition: 0.3s ease;   /* Animación suave */
+}
+
+/* Hover (cuando pasas el mouse) */
+.btn-menu:hover {
+    background-color: rgb(22, 150, 175); /* Color más oscuro */
+    transform: scale(1.05);              /* Efecto de agrandarse un poco */
+}
+h1 {
+    color:  rgb(4, 71, 85);
+}

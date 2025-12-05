@@ -4,12 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./otros/style.css">
 </head>
 <body>
-    <h1>Mi portafolio</h1>
-    <h2>Juan Pablo Echandia Sanchez</h2>
-    <a href="https://github.com/echandia27">Mi perfil</a>
-    <a href="https://github.com/echandia27/Python_excersice/blob/main/historias_de_usuario/historia_usuario_s1.py">HU1</a>
-    <a href="https://github.com/echandia27/Python_excersice/blob/main/historias_de_usuario/historia_usuario_s2.py">HU2</a>
+    <header>
+        <div class="header-top">
+            <img class="juan" src="/HTML_CSS_excercises/portafolio/imagenes/Diseño sin título.png" alt="Juan">
+            <div class="header-text">
+                <h1>Mi portafolio</h1>
+                <h2>Juan Pablo Echandia Sanchez</h2>
+            </div>
+        </div>
+        
+         <nav>
+                <ul>
+                    <li><a href="#Sobre-mi">Sobre Mi</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+    </header>
+    <section id="Sobre-mi">
+        <p>Bienvenido a mi portafolio. Aquí encontrarás proyectos de desarrollo web, diseño de interfaces y programación en Python. Mi objetivo es crear soluciones digitales que sean útiles, visualmente atractivas y escalables.</p>
+    </section>
+    <section id="Proyectos">
+    <h2>Proyectos que he realizado</h2>
+    <ul>
+        <li><a href="https://github.com/echandia27">Mi perfil</a></li>
+        <li><a href="https://github.com/echandia27/Python_excersice/blob/main/historias_de_usuario/Diagrama%20HU1.drawio.png">Diagrama</a></li>
+        <li><a href="https://github.com/echandia27/Python_excersice/blob/main/historias_de_usuario/historia_usuario_s1.py">HU1</a></li>
+        <li><a href="https://github.com/echandia27/Python_excersice/blob/main/historias_de_usuario/historia_usuario_s2.py">HU2</a></li>
+        <li><a href="https://github.com/echandia27/Python_excersice/tree/main/Simulacro_prueba">Simulacro</a></li>
+        <li><a href="https://github.com/echandia27/Prueba_de_desenpe-o_python.git">Prueba de desempeño</a></li>
+        <li><a href="./otros/mascotas.html">Mascotas</a></li>
+    </ul>
+</section>
+
+
+    <section id="contacto">
+        
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Formulario Contact</legend>
+                <!--Campo del nombre-->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu Nombre" required>
+
+                <!--campo correo-->
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+                <!--mensaje-->
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+
+                <!--boton enviar-->
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer><p>By Juan Pablo Echandia < ----- > jp.echandia@gmail.com</p></footer>
 </body>
-</html>
+</html> 

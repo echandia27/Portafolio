@@ -1,0 +1,239 @@
+    *{
+        margin: 0;
+        padding: 0; 
+    }
+
+    html, body {
+        height: 100%;
+    }
+    
+header {
+    position: relative;              /* Hace que el <header> sea el contenedor base para posicionar elementos absolutos dentro, como el overlay ::after.Sin esto, el overlay se desalinearía. */
+    height: 130px;
+    background-image: url("/Portafolio/imagenes/night-city-aesthetic-pz9wox70ww0iex1l.jpg"); /* tu imagen */
+    background-size: cover; /*La imagen cubre todo el header sin deformarse. Si sobra, recorta.*/
+    background-position: center; /*Centra la imagen, útil cuando está recortada.*/
+    color: aliceblue;
+    display: flex;
+    flex-direction: column; /*Organiza su contenido en columnas:.header-topnav*/
+    gap: 20px;
+    padding: 20px;
+}
+
+
+header::after {
+    content: ""; /*Necesario para que el pseudo-elemento exista.*/
+    position: absolute; /*Lo posiciona exactamente encima del header.*/
+    top: 0;
+    left: 0;
+    width: 100%; /*Cubre todo el header.*/
+    height: 100%; /*Cubre todo el header.*/
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 0; /* MUY IMPORTANTE: debajo del contenido */
+}
+
+
+.header-top,
+nav {
+    position: relative; /*Necesario para que z-index funcione.*/
+    z-index: 1; /*Esto pone el contenido por encima del overlay negro, que tiene z-index: 0.Sin estas dos líneas, tu contenido quedaría invisible detrás de la sombra negra.*/
+}
+
+
+    .header-top {
+        display: flex;       /* imagen y textos en fila */
+        align-items: center; /* centra verticalmente la imagen con los textos */
+        gap: 20px;
+    }
+
+/* CUADRO DEL FORMULARIO */
+fieldset {
+    width: 350px;
+    padding: 20px;
+    margin: 40px auto;            /* <-- ESTO LO CENTRA */
+    border: 2px solid #1b1b1b;
+    border-radius: 10px;
+    background-color: rgba(148, 137, 106, 0.822);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+legend {
+    font-size: 20px;
+}
+
+/* TÍTULO FLOTANTE */
+#contacto h2 {
+    position: absolute;
+    top: -18px;               /* sube el título por encima del borde */
+    left: 50%;                /* lo centra horizontalmente */
+    transform: translateX(-50%);
+    
+    background-color: rgb(207, 165, 25);  /* color del cuadro para que parezca “cortado” */
+    padding: 0 12px;          /* espacio a los lados */
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+/* ESTILOS DE LOS INPUTS Y TEXTAREA */
+#contacto input,
+#contacto textarea {
+    width: 330px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #a38c54;
+    font-size: 1rem;
+    background-color:  rgb(192, 181, 146);    
+}
+
+#contacto ::placeholder {
+    color: #856704;
+}
+ 
+
+
+/* BOTÓN */
+#contacto button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1a0f08;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#contacto button:hover {
+    background-color: #4e0c0a;
+}
+
+/* ESTILO DEL TÍTULO */
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 1.6rem;
+}
+
+
+    header img {
+        width: 140px;   /* ajusta al tamaño que quieras */
+        height: auto;
+        border-radius: 20px;
+        max-height: 140px;
+        margin-top: -5px;
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column; /* PONE LOS TEXTOS UNO DEBAJO DEL OTRO */
+        text-align: left;
+        margin-top: -50px;
+
+    }
+    .header-text h1 {
+        font-size: 2.5rem; /* aumenta el tamaño de "Mi portafolio" */
+        margin: 0;          /* elimina espacio extra arriba/abajo si quieres */
+        padding: 0;
+    }
+
+    .header-text h2 {
+        font-size: 1.5rem; /* aumenta el tamaño de "Juan Pablo Echandia Sanchez" */
+        margin: 0; /* pequeño margen arriba */
+        font-weight: normal; /* opcional: puedes cambiar grosor */
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(207, 165, 25);
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    nav ul {
+        display: flex;           /* pone los li en fila horizontal */
+        list-style: none;        /* quita los puntos de la lista */
+        padding: 0;
+        margin: 0;
+        justify-content: center; /* centra los enlaces horizontalmente */
+        gap: 30px; 
+        margin-top: -45px;              /* espacio entre los enlaces */
+    }
+
+    nav ul li a {
+        color: aliceblue;        /* color de los enlaces */
+        text-decoration: none;   /* quita el subrayado */
+        font-weight: bold;
+        transition: 0.3s;
+        
+    }
+
+    nav ul li a:hover {
+        color: #f7d46e;          /* color al pasar el mouse */
+    }
+
+    #Sobre-mi{
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    #Proyectos {
+        margin-top: 3rem;
+        text-align: center;
+        border-radius: 20px;
+        border:1px solid #1a0f08;
+        height: 100px;
+        width: 1000px;
+        margin: 0 auto 0 auto;
+        margin-top: 2rem;
+
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        
+    }
+    li{
+        list-style: none;
+    }
+    #proyectos {
+
+    }
+    #Proyectos h2 {
+        padding: 20px;
+    }
+
+    #Proyectos a {
+        gap: 3000px;
+        color: #1b1b1b;
+        text-decoration: none;
+        margin: 1rem;
+        transition: 0.3s;
+        
+    }
+
+    #Proyectos a:hover {
+        color: #7a2807;          /* color al pasar el mouse */
+    }
+
+    footer {
+        background-color: #000000;
+        color: #856704;
+        justify-content: center;
+        margin: 0;
+        margin-top: auto;
+        padding: 15px;
+    }
+        
+     footer p {
+        text-align: center;
+     }
+    
+    
+    
