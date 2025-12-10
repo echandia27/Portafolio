@@ -37,15 +37,23 @@ header {
 }
 
 .galeria {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 20px;
-    padding: 15px;
+    padding: 30px;
     border: 2px solid rgb(30, 183, 210);
     border-radius: 20px;
     margin-left: 400px;
     margin-right: 300px;
+    margin-top: 60px;
+    box-shadow: 0 0 25px rgb(30, 183, 210);
 
+}
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(30, 183, 210);
+    transition: all 0.3s ease;
 }
 
 .card {
@@ -55,6 +63,7 @@ header {
 
 .card p {
     margin-bottom: 15px;
+    margin-top: 20px;
     font-size: 16px;
     color: rgb(40,40,40);
 }
