@@ -11,7 +11,7 @@ html, body {
 
 /* BODY */
 body {
-    background-color: rgb(207, 165, 25);
+    background-color: rgb(233, 179, 4);
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
@@ -67,6 +67,17 @@ header img {
     font-weight: normal;
 }
 
+#Sobre-mi p {
+    display: flex;
+    margin-top: 10px;
+    font-weight: inherit;
+    font-family: sans-serif;
+    max-width: 1000px;
+    text-align: left;
+    margin: 20px auto;
+
+}
+
 /* NAV */
 nav ul {
     display: flex;
@@ -102,7 +113,8 @@ nav ul li a:hover {
     width: 90%;
     padding: 25px;
     margin: 2rem auto;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(167, 163, 163, 0.76);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .proyectos-grid {
