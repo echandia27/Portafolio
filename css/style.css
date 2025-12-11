@@ -69,12 +69,11 @@ header img {
 
 #Sobre-mi p {
     display: flex;
-    margin-top: 10px;
     font-weight: inherit;
     font-family: sans-serif;
     max-width: 1000px;
     text-align: left;
-    margin: 20px auto;
+    margin: 40px auto;
 
 }
 
@@ -102,6 +101,16 @@ nav ul li a:hover {
 #Sobre-mi {
     text-align: center;
     padding: 2rem 20px;
+}
+
+hr {
+    height: 1px;
+    width: 60%;
+    border: none;
+    background-color: #000000;
+    margin: auto;
+    margin-top: 40px;
+
 }
 
 /* PROYECTOS */
