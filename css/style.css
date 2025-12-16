@@ -122,8 +122,8 @@ hr {
     width: 90%;
     padding: 25px;
     margin: 2rem auto;
-    background-color: rgba(167, 163, 163, 0.76);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #f2e2a3, #646463);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .proyectos-grid {
@@ -135,7 +135,7 @@ hr {
 
 .proyectos-grid .card {
     padding: 8px;
-    background-color: #f2e2a3;
+    background: linear-gradient(135deg, #f2e2a3, #d1b565);
     border-radius: 12px;
     border: 1px solid #1a0f08;
     text-decoration: none;
@@ -210,3 +210,4 @@ footer {
     padding: 15px;
     margin-top: auto;
 }
+
