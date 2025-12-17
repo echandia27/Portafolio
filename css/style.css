@@ -18,7 +18,7 @@ body.cambiar h2 {
 }
 
 body.cambiar .sol {
-    box-shadow:0 5px 10px rgb(233, 179, 4);
+    box-shadow:0 5px 10px rgb(247, 247, 247);
     
 }
 
@@ -28,6 +28,7 @@ body.cambiar .prueba{
 
 body.cambiar{
     background-image: url("../imagenes/photo-1677029907981-e9a44fb7409a.jpeg");
+    
 
 }
 
@@ -35,7 +36,9 @@ body.cambiar::after {
     background-color: rgba(255, 255, 255, 0);
 }
 
-
+body.cambiar #Proyectos {
+    box-shadow: 0 0 15px white;
+}
 
 body.cambiar hr {
 
@@ -58,6 +61,7 @@ body.cambiar header h2 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+       
 }
 
 html, body {
@@ -85,6 +89,27 @@ body::after {
     z-index: -1;
 }
 
+/* Capa para transición de fondo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../imagenes/Amarillo-wallpapers-14.jpg"); /* Fondo inicial */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transition: opacity 1s ease-in-out; /* Transición suave */
+    opacity: 1;
+}
+
+/* Cuando cambia la clase */
+body.cambiar::before {
+    background-image: url("../imagenes/photo-1677029907981-e9a44fb7409a.jpeg"); /* Nuevo fondo */
+    opacity: 1;
+}
+
+
 /* HEADER */
 header {
     position: relative;
@@ -96,13 +121,14 @@ header {
     flex-direction: column;
     gap: 20px;
     padding: 25px 20px;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
 header::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color:var(--negro-trasparente);
+    background-color:rgba(0, 0, 0, 0.795);
     z-index: 0;
 }
 
@@ -244,7 +270,7 @@ fieldset {
     border: 2px solid #1b1b1b;
     border-radius: 10px;
     background-color: rgba(148, 137, 106, 0.85);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 legend {
