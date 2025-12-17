@@ -1,3 +1,58 @@
+:root {
+    --amarillo-quemado:  rgb(238, 185, 11);
+    --black: black;
+    --white: white;
+    --linea-gradiante: linear-gradient(135deg, #f2e2a3, #646463);
+    --negro-trasparente: rgb(0, 0, 0, 0.7);
+}
+body.cambiar {
+    background-color: black;
+    color:   rgb(0, 0, 0);
+
+
+    
+}
+body.cambiar h2 {
+    color:  rgb(0, 0, 0);
+    
+}
+
+body.cambiar .sol {
+    box-shadow:0 5px 10px rgb(233, 179, 4);
+    
+}
+
+body.cambiar .prueba{
+    background-color: rgba(235, 228, 228, 0.568)
+}
+
+body.cambiar{
+    background-image: url("../imagenes/photo-1677029907981-e9a44fb7409a.jpeg");
+
+}
+
+body.cambiar::after {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+body.cambiar hr {
+
+    height: 1px;
+    width: 60%;
+    border: none;
+    background-color:rgb(233, 179, 4);
+    margin: auto;
+    margin-top: 40px;        /* Centrar horizontalmente */
+}
+
+
+
+body.cambiar header h2 {
+    color: white;
+}
+
 /* RESET GLOBAL */
 * {
     margin: 0;
@@ -11,20 +66,32 @@ html, body {
 
 /* BODY */
 body {
-    background-color: rgb(233, 179, 4);
+    background-image: url("../imagenes/Amarillo-wallpapers-14.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color:rgba(211, 181, 14, 0.39);
+    z-index: -1;
 }
 
 /* HEADER */
 header {
     position: relative;
-    background-image: url("/Portafolio/imagenes/night-city-aesthetic-pz9wox70ww0iex1l.jpg");
+    background-image: url("../imagenes/1920x1080.jpg");
     background-size: cover;
     background-position: center;
-    color: aliceblue;
+    color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -35,7 +102,7 @@ header::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color:var(--negro-trasparente);
     z-index: 0;
 }
 
@@ -43,6 +110,21 @@ header::after {
     position: relative;
     z-index: 1;
 }
+
+
+
+.sol {
+    position: absolute;  /* Se saca del flujo del documento */
+    top: 380px;           /* distancia desde la parte superior */
+    left: 160px;         /* distancia desde la derecha */
+    width: 40px;
+    height: 50px;
+    z-index: 10;         /* que esté por encima del resto */
+    box-shadow:0 5px 10px rgb(2, 2, 2);
+    border-radius: 50%;
+}
+
+
 
 /* HEADER CONTENT */
 .header-top {
@@ -74,6 +156,8 @@ header img {
     max-width: 1000px;
     text-align: left;
     margin: 40px auto;
+    font-weight: bold;
+    
 
 }
 
@@ -87,7 +171,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: aliceblue;
+    color: var(--white);
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -101,29 +185,28 @@ nav ul li a:hover {
 #Sobre-mi {
     text-align: center;
     padding: 2rem 20px;
+    
 }
 
-hr {
-    height: 1px;
+.prueba {
+    border: 1px solid black;
+    border-radius: 15px;
     width: 60%;
-    border: none;
-    background-color: #000000;
+    display: flex;
     margin: auto;
-    margin-top: 40px;
-
+    background-color: rgba(128, 128, 128, 0.336);
 }
 
 /* PROYECTOS */
 #Proyectos {
     text-align: center;
     border-radius: 20px;
-    border: 1px solid #1a0f08;
     max-width: 1000px;
     width: 90%;
     padding: 25px;
     margin: 2rem auto;
     background: linear-gradient(135deg, #f2e2a3, #646463);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.644);
 }
 
 .proyectos-grid {
@@ -135,9 +218,9 @@ hr {
 
 .proyectos-grid .card {
     padding: 8px;
-    background: linear-gradient(135deg, #f2e2a3, #d1b565);
+    box-shadow: 0 0 10px black;
     border-radius: 12px;
-    border: 1px solid #1a0f08;
+    
     text-decoration: none;
     color: #1b1b1b;
     font-weight: bold;
