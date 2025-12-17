@@ -232,7 +232,7 @@ nav ul li a:hover {
     padding: 25px;
     margin: 2rem auto;
     background: linear-gradient(135deg, #f2e2a3, #646463);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.644);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .proyectos-grid {
