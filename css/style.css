@@ -146,10 +146,19 @@ header::after {
     width: 40px;
     height: 50px;
     z-index: 10;         /* que esté por encima del resto */
-    box-shadow:0 5px 10px rgb(2, 2, 2);
+    box-shadow:0 0 20px rgb(0, 0, 0);
     border-radius: 50%;
+    cursor: pointer;
+    /* transición suave */
+    transition: all 0.3s ease;
 }
 
+/* CUANDO PASA EL MOUSE */
+.sol:hover {
+    background-color: orange;
+    box-shadow: 0 0 35px rgb(255, 170, 0);
+    transform: scale(1.1);
+}
 
 
 /* HEADER CONTENT */
